@@ -1,6 +1,5 @@
 var express = require('express')
 var app = express()
-var url = require('url')
 var mass = [];
  
 var Flickr = require("flickrapi"),
@@ -10,7 +9,9 @@ var Flickr = require("flickrapi"),
     };
 
 app.set('view engine', 'ejs');
-
+app.get('/',function (req, res){
+    res.end("Welcome")
+})
 
 app.get('/*',function (req, res) { 
     Flickr.tokenOnly(flickrOptions, function(error, flickr) {
@@ -32,10 +33,6 @@ app.get('/*',function (req, res) {
         	mass = []
         });
     });
-    
-    
-    
-    
 })
 
 
