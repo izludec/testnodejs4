@@ -4,8 +4,8 @@ var mass = [];
  
 var Flickr = require("flickrapi"),
     flickrOptions = {
-      api_key: "2da04588e0361a239d9d7a45e049584f",
-      secret: "920250461bcaee27"
+      api_key: "*******",
+      secret: "******"
     };
 
 app.set('view engine', 'ejs');
